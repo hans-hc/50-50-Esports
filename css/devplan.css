@@ -1,0 +1,38 @@
+/* Styles for Development Plan Webpage */
+body {
+    color: #ffffff; /* White text color for contrast */
+}
+
+#container {
+    max-width: 1000px;
+    margin: 20px auto; /* Centering the container */
+    padding: 20px;
+}
+
+#header h1 {
+    color: #d03b43; /* Accent color for headers */
+}
+
+#content {
+    padding: 20px;
+}
+
+#content h2 {
+    color: #d03b43;
+    border-bottom: 2px solid #d03b43; /* Underline accent for subsection headers */
+    padding-bottom: 5px;
+}
+
+#content p {
+    line-height: 1.6;
+    margin-top: 0;
+    margin-bottom: 1em; /* Spacing for paragraph readability */
+}
+
+#content b {
+    color: #7c7c7c; /* Subtle grey for bolded text */
+}
+
+#content p b {
+    font-weight: bold; /* Ensuring bold text is emphasized */
+}

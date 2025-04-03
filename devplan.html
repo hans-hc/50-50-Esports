@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <title>50/50. | Dev. Plan.</title>
+    <link rel="icon" href="5050small.jpg">
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/devplan.css">
+    <link rel="stylesheet" href="css/mediaqueries.css" />
+</head>
+
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">
+            <mark style="background-color: #d03b43; color: white;">
+                &nbsp;<strong>50/50.</strong>&nbsp;</mark>
+        </div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="" style="color:#d03b43;">PROJECT "MM"</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="project.html">Client Report</a></li>
+                <li><a href="devplan.html">Dev. Plan</a></li>
+                <li><a href="showcase.html">Showcase</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+        <div class="logo">
+            <mark style="background-color: #d03b43; color: white;">
+                &nbsp;<strong>50/50.</strong>&nbsp;</mark>
+        </div>
+        <div>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links">
+                    <li><a href="" onclick="toggleMenu()">PROJECT "MM"</a></li>
+                    <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                    <li><a href="project.html" onclick="toggleMenu()">Client Report</a></li>
+                    <li><a href="devplan.html" onclick="toggleMenu()">Dev. Plan</a></li>
+                    <li><a href="showcase.html" onclick="toggleMenu()">Showcase</a></li>
+                    <li><a href="about.html" onclick="toggleMenu()">About Us</a></li>
+                </div>
+            </div>
+    </nav>
+
+    <div id="container">
+        <div id="header">
+            <h1 style="color:white;">Development Plan</h1>
+        </div>
+        <div id="content">
+            <h2 id="subtitle">1: Our team, the client, and the app</h2>
+            <p>
+                Team members are Mike, Evan, Hansen and Andrew. Our client is Mekaeel, a professional esports player
+                looking to offer coaching services and advice in a selection of competitive esports games. We are 50/50,
+                and we plan to build one collective web app/website, accessible through the internet.
+            </p>
+            <h2 id="subtitle">2: Purpose</h2>
+            <p>
+                Our app is designed to allow players to connect with coaches and professional players in regards to
+                coaching, advice and strategy for different games. Users will be able to post questions and inquire
+                about their gameplay within discussion pages (similar to reddit “threads”) for each game, where other
+                users and coaches will be able to answer and interact with them. Furthermore, users will be able to view
+                the profiles of different coaches to connect and arrange private coaching sessions at the coach’s
+                selected rate. We also have plans to work with pro esports teams, where users will be able to submit
+                gameplay or compete in tryouts if a team is looking for new players. Players and coaches will each have
+                to create an account/profile, where various info and data will be displayed.
+                To summarize, under each game title, users will be able to:
+                Post gameplay footage, questions, and ask for advice,
+                view upcoming esports events for the related game title, and
+                view a list of pro players and expand into their profiles.
+
+                Under each profile, the following data/information will be available to the public:
+                Verified badge, played games,
+                coaching availability *optional, coaching rates*, coach rating (out of 5 stars)*, and related game
+                titles.
+
+            </p>
+            <h2 id="subtitle">3: Data Description</h2>
+            <p>
+                Table 1: Coaches information
+                We will need a table to store the information detailing all the accounts registered as coaches on the
+                website.
+                Each coach profile will store information detailing the coach’s name, age, games of expertise, coaching
+                rate(optional), coaching rating, and presence of a verification badge.
+                Field names and associated data types: coachID(int, primary key), name(string), age(int), games(array of
+                strings), rate(float), rating(float (0.0 to 5.0)), verified(boolean).
+            </p>
+            <p>
+                Table 2: Standard User Information
+                We will need a table to store the information detailing all the accounts registered as players on the
+                website.
+                Each player profile will store information detailing the player’s name and games of interest.
+                Field names and associated data types: playerID(int, primary key), name(string), games(array of
+                strings).
+            </p>
+            <p>
+                Table 3: Games
+                We will need a table to store the information outlining all the biggest games in the esports industry
+                and their descriptions
+                Each game will store information detailing the game name and description.
+                Field names and associated data types: gameID(int, primary key), name(string), description(string).
+            </p>
+            <p>
+                Table 4: Discussion Boards
+                We will need a table to store the discussions held under the discussion boards of the website.
+                Each discussion board will store information detailing the discussion post author, discussion post
+                heading, discussion post responses/comments and their respective authors.
+                Field names and associated data types: boardID(int, primary key), author(int (this will be the author’s
+                playerID/coachID)), type(boolean (this will identify whether the author is a player or a coach)),
+                post(string), discussions(2D Array - Each inner array will represent a discussion post based on the
+                following format [writer(int), type(boolean), post(string)])
+            </p>
+            <h2 id="subtitle">4: Functions performed by the app</h2>
+            <p>
+                Users can post questions starting thread-like conversations for coaches to respond to. Some sort of
+                ‘post’ function will add the user’s message to a database and display it when that thread is opened on
+                the app. Users will also be able to rate verified coaches based on their experience in real life with
+                them as an esports player and thus a rating function should allow a user’s input rating to be saved to a
+                database of the coaches information. Users should be able to create an account with information like
+                whether they are a player or a coach and can be verified, so a create account function should be added
+                and will add this information to a user database.
+            </p>
+            <h2 id="subtitle">5: Role of PHP and JavaScript</h2>
+            <p>
+                PHP will be used to store the data required to be displayed by the web app. This includes the users’
+                (coaches and players) contact information/profiles saved by the web app. A list of games within the
+                esports industry. A list of coaches registered on the website along with their associated ratings and
+                games. A “thread-style” question and response data section which will save question-response
+                conversations between players and coaches.
+
+
+                The bulk of the code will be written in PHP rather than javascript, due to the vast amount of data
+                required to be saved through server-side programming.
+
+
+                PHP will work with Javascript through…
+                1. Event listeners to track when users create or sign into an account, post or respond to a question on
+                a
+                “thread”, or give ratings to a certain coach. When these event listeners are activated, PHP will be used
+                to collect and save the data on the website.
+                2. Calculating coaches’ ratings. PHP will be used to store all the ratings a certain coach has been
+                given.
+                Javascript will be used to calculate the overall rating a coach has amassed given the list of user
+                ratings.
+            </p>
+            <h2 id="subtitle">6: Roles of Team Members</h2>
+            <p>
+                We will spread the responsibility across a few important web pages that are part of the same app,
+                including the home/about page, games browsing page, players and coaches leaderboard and account creation
+                page. This may change in the future but those are the core aspects of our app. Everyone should be
+                responsible for maintaining consistency and should all be using javascript, html and php since all our
+                web pages require structure, design and database interaction. More specifically, Hansen will be frontend, working on design and css styling, while also connecting the backend to frontend elements. Mikey will also be frontend, working on site animations and javascript.
+                Andrew and Evan will work on the backened together, working on PHP and ensuring the databases are correctly implemented.
+            </p>
+            <h2 id="subtitle">7: The Increments</h2>
+            <p>
+                By the date of the first increment, our web app will contain a basic layout without functionality for
+                the following:
+                A profile creation page in which players and coaches will be able to create profiles that will contain
+                their personal data and contact information.
+                A page containing a detailed, tile-structured list of games within the esports industry.
+                A page containing a structured list of coaches(along with their associated ratings and personal details)
+                harbouring accounts on the 50/50 website.
+                A sign-in page where users can sign into their created account(s).
+
+            </p>
+            <h2 id="subtitle">8: Client Feedback</h2>
+            <p>
+                Our client's main concern was the time constraint. The features we plan to implement are ambitious, and
+                our client Mekaeel had the following say:
+            </p>
+            <p>
+                “Will you ensure all these functions are completed before the project deadline? What would be cut if the
+                timing doesn’t work out?”
+            </p>
+            <p>
+                Our response? To stay on track with the deadline, our priority is to develop a high-quality esports
+                information hub and coach directory rather than an open forum. This means we will focus on key features
+                like detailed coach profiles, verified coach contact options, and an esports event database. If time
+                becomes a constraint, we would scale back or delay features like gameplay submissions for tryouts or
+                interactive discussion boards, ensuring the core functionalities—informing users about esports and
+                connecting them with professional coaches—are fully polished and operational first.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

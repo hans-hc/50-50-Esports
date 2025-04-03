@@ -1,0 +1,26 @@
+#content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #ffffff;
+}
+
+#content h2 {
+    color: #d03b43;
+    border-bottom: 2px solid #d03b43;
+    padding-bottom: 5px;
+}
+
+#content p {
+    line-height: 1.6;
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+#content b {
+    color: #7c7c7c;
+}
+
+#content p b {
+    font-weight: bold;
+}

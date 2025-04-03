@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <title>50/50. | Showcase.</title>
+    <link rel="icon" href="5050small.jpg">
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/showcase.css">
+    <link rel="stylesheet" href="css/mediaqueries.css" />
+</head>
+
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">
+            <mark style="background-color: #d03b43; color: white;">
+                &nbsp;<strong>50/50.</strong>&nbsp;</mark>
+        </div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="" style="color:#d03b43;">PROJECT "MM"</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="project.html">Client Report</a></li>
+                <li><a href="devplan.html">Dev. Plan</a></li>
+                <li><a href="showcase.html">Showcase</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+        <div class="logo">
+            <mark style="background-color: #d03b43; color: white;">
+                &nbsp;<strong>50/50.</strong>&nbsp;</mark>
+        </div>
+        <div>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links">
+                    <li><a href="" onclick="toggleMenu()">PROJECT "MM"</a></li>
+                    <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                    <li><a href="project.html" onclick="toggleMenu()">Client Report</a></li>
+                    <li><a href="devplan.html" onclick="toggleMenu()">Dev. Plan</a></li>
+                    <li><a href="showcase.html" onclick="toggleMenu()">Showcase</a></li>
+                    <li><a href="about.html" onclick="toggleMenu()">About Us</a></li>
+                </div>
+            </div>
+    </nav>
+    <div id="content">
+        <div id="header">
+            <h1>Website Design</h1>
+            <p>
+                <a href="https://www.art.yale.edu/" target="_blank">Bad: art.yale</a>
+                |
+                <a href="https://www.shopify.com/ca" target="_blank">Good: shopify.com</a>
+            </p>
+        </div>
+        <div id="content">
+            <h2 id="subtitle">Bad: Art.Yale</h2>
+            <p><b>Consistency:</b></p>
+            <p>
+                While the website is generally consistent in its overall layout, it is unclear on first look as a new
+                visitor what each block of text is used for. The color scheme is incredibly inconsistent as different
+                blocks of media and text are various different colors, most of which are unnecessarily flashy and make
+                the user experience overwhelming. There is no specific scheme for how the colors are distributed in the
+                website which makes similar text blocks unreliable and hard to identify.
+            </p>
+            <p><b>Ease Of Navigation:</b></p>
+            <p>
+                The website is difficult to navigate as well, due to the overwhelming choice of colors and lack of a
+                concrete layout. The general white navigation box on the top left includes the major webpages, however
+                it took a while to realize it was even there. These major links should be front and center for visitors
+                to see and easily be redirected to their desired page. There is no clear use of a header or footer, just
+                some contact and organization information, and the content section is mediocre at best. The quick links
+                menu on the Home page should have been implemented into the header as opposed to a drop down lower on
+                the page, as its current form feels out-of-place and takes a lot of space to display all the links,
+                which isn’t mobile friendly.
+            </p>
+            <p><b>Universal Usability</b></p>
+            <p>
+                This surprisingly isn’t a large problem, as text and general layout items flatten to accommodate for
+                smaller screens, although it is questionable why on a desktop screen the layout only takes up the left
+                third of the screen and is not all centered to more effectively use the whole space to display the
+                items. Additionally, the previously noted white navigation box on the top-left becomes a hamburger icon
+                on the top right on a smaller screen which drops the menu down from the top resembling a header. This
+                should have just been a header from the beginning.
+            </p>
+            <p><b>Error Prevention</b></p>
+            <p>
+                One thing of note is that all blocks of text and media include a white tab on the bottom right which
+                provides details on the editor and last edit date, which is completely unnecessary for the visitor’s
+                experience. Outside of that, error prevention doesn’t seem to be a huge concern for this website, but
+                the previous 3 principles could certainly use some work.
+            </p>
+
+            <h2 id="points">Good: Shopify</h2>
+            <p><b>Consistency:</b></p>
+            <p>
+                Even when clicking into a listing, the header remains the same, with the clickable icon to return to
+                home page, search bar, and user account information. The footer also remains the same from the home
+                page. The same color scheme is used throughout the website, with red-pink color accents, a light user
+                interface, and black text for simplicity. Minimal and simple icons are utilized to present an overall
+                modern look, which is also complemented by AirBnB’s own typeface font “Cereal”.
+            </p>
+            <p><b>Ease Of Navigation:</b></p>
+            <p>
+                Upon entering the site, users are immediately presented with different housing listings. The search bar
+                at the top of the page has different user specifications, which is collapsed as you scroll down. As
+                mentioned previously, even when clicking into a listing, the header remains the same, with the clickable
+                icon to return to home page, search bar, and user account information. This ensures a user is able to
+                access core functions even when clicked into a listing. In the home page under the header, there are
+                different housing options to select.
+            </p>
+            <p><b>Universal Usability:</b></p>
+            <p>
+                The usability for this website is fantastic, as it implements responsive design aspects that we learned
+                in lecture. The website viewed on a larger desktop screen layout efficiently uses space to its advantage
+                and frankly, the user’s advantage. When the screen size is reduced, text is compressed and images are
+                reduced in size and are set in an easy, vertical layout so mobile users can quickly scroll down to view
+                listings.
+            </p>
+            <p><b>Error Prevention:</b></p>
+            <p>
+                The website effectively prevents errors by providing clear feedback and simple navigation. Users are
+                less likely to encounter broken links or confusing layouts, ensuring a smooth experience.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+#header{
+    padding: 30px;
+    margin-bottom: 50px;
+    color: #d03b43;
+    font-size: 50px;
+    font-family: 'Oxanium', sans-serif;
+}
+
+#content{
+    margin: 25px;
+    margin-bottom: 100px;
+}
+
+body{
+    font-family: 'Oxanium', sans-serif;
+    margin: 0;
+    background-color: #18191c;
+    color: white;
+}
+
+#footer{
+    padding: 20px;
+    margin-top: 80px;
+    padding-bottom: 15px;
+}
+
+.link{
+    border-style: outset;
+    border-width: 3px;
+    padding: 5px;
+    font-size: 30px;
+    color: #d03b43;
+    font-family: 'Oxanium', sans-serif;
+    text-decoration: none;
+    border-color: rgb(141, 141, 141);
+}
+
+.name{
+    color: #d03b43;
+    font-family: 'Oxanium', sans-serif;
+    font-size: 30px;
+}
+
+hr {
+    height: 3px;
+    background-color: #fff;
+    width: 95%;
+}
